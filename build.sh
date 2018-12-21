@@ -1,5 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-docker pull azul/zulu-openjdk:8
-docker-compose build
+docker build --pull --tag zip .
 

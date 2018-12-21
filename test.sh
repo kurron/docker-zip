@@ -1,12 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 
-
-CMD="docker run --cpus 1 \
-                --interactive \
-                --name zulu-test \
+CMD="docker run --interactive \
+                --name zip-test \
                 --rm \
                 --tty \
-                docker-azul-jdk-8_azul-jdk:latest"
-echo $CMD
-$CMD
+                zip:latest"
+echo ${CMD}
+${CMD}

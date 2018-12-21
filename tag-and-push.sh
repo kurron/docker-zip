@@ -1,13 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # use the time as a tag
 UNIXTIME=$(date +%s)
 
 # docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
-docker tag docker-azul-jdk-8_azul-jdk:latest kurron/docker-azul-jdk-8:latest
-docker tag docker-azul-jdk-8_azul-jdk:latest kurron/docker-azul-jdk-8:${UNIXTIME}
+docker tag zip:latest kurron/zip:latest
+docker tag zip:latest kurron/zip:${UNIXTIME}
 docker images
 
 # Usage:  docker push [OPTIONS] NAME[:TAG]
-docker push kurron/docker-azul-jdk-8:latest
-docker push kurron/docker-azul-jdk-8:${UNIXTIME}
+docker push kurron/zip:latest
+docker push kurron/zip:${UNIXTIME}
+
